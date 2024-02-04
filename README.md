@@ -10,10 +10,10 @@ Assessing soil health through comprehensive measurements can be costly and time-
 ### Dataset:
 soil_measures.csv: Contains essential soil characteristics for various fields, including:
 
-N: Nitrogen content ratio
-P: Phosphorous content ratio
-K: Potassium content ratio
-pH: Soil pH value
+N: Nitrogen content ratio   
+P: Phosphorous content ratio   
+K: Potassium content ratio  
+pH: Soil pH value  
 crop: Categorical variable indicating the corresponding optimal crop for each field (target variable)
 
 ## Steps:
@@ -21,21 +21,21 @@ crop: Categorical variable indicating the corresponding optimal crop for each fi
 ### Data Preprocessing:
 
 Read the soil_measures.csv dataset into a pandas DataFrame.
-Perform data checks:
-Number of crops
-Missing values
-Numeric data in feature columns
+###### Perform data checks:
+Number of crops  
+Missing values  
+Numeric data in feature columns    
 Split data into training and test sets (80/20 split, random state 42).
 ### Individual Feature Prediction:
 
-Loop through each feature individually.
-Fit a Logistic Regression model for each feature.
+Loop through each feature individually.   
+Fit a Logistic Regression model for each feature.   
 Calculate F1 score for each model.
 ### Multicollinearity Analysis:
 
-Perform correlation analysis between each pair of features.
-Select features without high correlation to avoid multicollinearity.
+Perform correlation analysis between each pair of features.   
+Select features without high correlation to avoid multicollinearity.   
 ### Final Model Training and Evaluation:
 
-Train a new Logistic Regression model (log_reg) using the selected features.
-Evaluate model performance using F1 score and store the metric in model_performance.
+Train a new Logistic Regression model (log_reg) using the selected features.   
+Evaluate model performance using F1 score and store the metric in model_performance.    
